@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Droid Arabic Naskh;
+    font-weight: normal;
+    box-sizing: border-box;
+
+
+}
+body {
+    direction: ltr;
+    background-image: url(https://i.ibb.co/zQ2yMc7/background.png);
+}
+a {
+    text-decoration: none;
+}
+.post {
+    background: #fff;
+    margin: 0px auto;
+    padding: 10px;
+    width: 100%;
+   height: 362px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+.post img {
+    width: 100%;
+}
+.welcome {
+    font-size: 15px;
+}
+.amount,
+#getname {
+    color: #000;
+    text-decoration: none;
+}
+.done {
+    text-align: center;
+    color: #27ae60;
+}
+.tip {
+    font-size: 22px;
+color: red;
+}
+.title {
+    text-align: center;
+}
+.error {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+button {
+    display: block;
+    width: 300px;
+    height: 38px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 35px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: #3a5664;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #098105;
+}
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+.phone input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+#confirm {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 27px;
+}
+#loader {
+    text-align: center;
+}
+.spin {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 8px rgb(9, 129, 5);
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+    display: none;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 27px;
+    padding: 2px;
+    
+}
+#fill,
+#fill2 {
+    background: #008069;
+    width: 0%;
+    height: 100%;
+}
+.percentage {
+    width: 100px;
+    float: right;
+    height: 28px;
+    font-size: 16px;
+    
+}
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+#check,
+#check2 {
+    display: none;
+}
+.counter {
+    color: #7f7f7f;
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 0 10px 2px;
+  
+}
+.reactions {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
+.counter img {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: content-box;
+}
+.like,
+.love {
+    margin-right: -5px;
+}
+.like {
+    z-index: 2;
+}
+.love {
+    z-index: 1;
+}
+.bar {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #e1e2e3;
+}
+.bar .react {
+    display: table-cell;
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.comments {
+    direction: ltr;
+}
+.comment {
+    padding: 6px 0;
+    margin-top: 5px;
+}
+.comment img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.reply {
+    margin-left: 37px;
+}
+.single-container {
+    margin-left: 37px;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.single-container .user {
+    display: inline-block;
+    cursor: pointer;
+    color: #365899;
+    margin-bottom: 5px;
+}
+.single-container .text {
+    display: block;
+}
+.buttons {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 47px;
+    color: #90949c;
+}
+.action {
+    cursor: pointer;
+}
+.action:hover {
+    text-decoration: underline;
+}
+.input {
+    padding: 6px 12px 12px;
+}
+.input input {
+    width: 100%;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+}
+.A{
+
+    
+    text-align: center;
+	width:75%;
+	border-radius:15px;
+	padding:5px;
+	margin-bottom:10px;
+    background-color: rgb(164, 219, 175);
+}
+
+.w3-container{
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 10%;
+  height: 361px;
+text-align: center;
+}
+
+  
+.date {
+    color: grey;
+    font-size: 13px;
+}
+.reactions {
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+  margin: 22px auto;
+    margin-left: 82px;
+}
+.reactions img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+.like{
+    margin-right: -5px;
+    border: 2px solid #fff;
+}
+.love {
+    margin-right: -5px;
+    border: 2px solid #fff;
+}
+.care {
+    z-index: 2;
+    border: 2px solid #fff;
+}
+.care1 {
+    margin-left: -35px;
+    z-index: 3;
+}
+.total {
+    margin-left: -40px;
+    z-index: 4;
+    font-size: 14px;
+    
+}
+
+#confm{
+display: block;
+    width: 203px;
+    height: 38px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 35px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: #ebadad;
+    transition: background 0.3s ease;
+}
+.tip1{
+font-size:14px;
+    color: black;
+}
+.tip2{
+font-size: 14px;
+    color: black;
+}

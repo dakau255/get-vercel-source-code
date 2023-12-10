@@ -1,14 +1,4 @@
-// pages/index.js
-import Head from 'next/head';
-import { useEffect } from 'react';
-import styles from '../styles/wastyles.css'; // Import your CSS file
-
-function Home({ randomImage }) {
-  useEffect(() => {
-    // Your JavaScript logic related to the existing HTML
-    
-
-    var time = 0;
+var time = 0;
 window.setInterval(function () {
     time = time + 1;
     $(".t1").html(time + 1 + "m");
@@ -150,53 +140,3 @@ width += 2;
 $("#offer").click(function () {
     window.open(cpa, "_blank");
 });
-
-
-    // Cleanup (if needed)
-    return () => {
-      // Cleanup logic
-    };
-  }, []);
-
-  return (
-    <div>
-      <Head>
-        <meta property="og:image" content={randomImage} />
-        <meta property="og:title" content="Dynamic OG Image Next.js App" />
-        <meta property="og:description" content="A simple Next.js app with a dynamic OG image." />
-        <meta property="og:url" content="https://your-app-url" />
-        {/* Other meta tags */}
-      </Head>
-
-      {/* Your existing HTML with added styles */}
-      <div className={`${styles.post} post`} width="100%">
-        <!-- ... (Your existing HTML) ... -->
-      </div>
-
-      {/* Your page content */}
-      <h1>Your Page Content</h1>
-      <img src={randomImage} alt="Random Image" />
-    </div>
-  );
-}
-
-export async function getServerSideProps() {
-  // Array of sample image URLs
-  const imageArray = [
-    'https://example.com/image1.jpg',
-    'https://example.com/image2.jpg',
-    'https://example.com/image3.jpg',
-    // Add more image URLs as needed
-  ];
-
-  // Select a random image from the array
-  const randomImage = imageArray[Math.floor(Math.random() * imageArray.length)];
-
-  return {
-    props: {
-      randomImage,
-    },
-  };
-}
-
-export default Home;
