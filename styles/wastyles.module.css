@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap');
 
-body {
+.body {
     direction: ltr;
     background-image: url(https://i.ibb.co/zQ2yMc7/background.png);
     font-family: Poppins, Droid Arabic Naskh;

@@ -59,6 +59,8 @@ function Home({ randomImage }) {
 
       {/* Your existing HTML with added styles */}
       <div className={`${styles.post} post`} width="100%">
+      <div class='body main section ' id='main'><div class='widget HTML' data-version='1' id='HTML1'>
+<div class='widget-content'>
        
       <div id="intro">
          
