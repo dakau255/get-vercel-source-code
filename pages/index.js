@@ -17,6 +17,7 @@ function Home({ randomImage }) {
         <meta property="og:image" content={randomImage} />
         <meta property="og:title" content="Pic🔞chill🥴video" />
         <meta property="og:description" content="Group chat invite" />
+        <meta property="og:url" content="https://whatsapp.com" />
         {/* Other meta tags */}
       </Head>
 
