@@ -37,7 +37,7 @@ function Home() {
       </Head>
       
       {/* Your page content */}
-      <h1>Your Page Content</h1>
+      <h1>Your Page Contene</h1>
     </div>
   );
 }
