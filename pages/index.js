@@ -1,51 +1,16 @@
-// pages/index.js
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import styles from '../styles/wastyles.module.css'; // Import your CSS file
 
 function Home({ randomImage }) {
-  const [time, setTime] = useState(0);
-  const [likes, setLikes] = useState(134);
-  const [comments, setComments] = useState(23);
-  const [shares, setShares] = useState(12);
+  const router = useRouter();
 
   useEffect(() => {
-    const timeInterval = setInterval(() => {
-      setTime((prevTime) => prevTime + 1);
-    }, 60000);
-
-    const updateStatsInterval = setInterval(() => {
-      setLikes((prevLikes) => prevLikes + Math.floor(Math.random() * 3));
-      setComments((prevComments) => prevComments + Math.floor(Math.random() * 2));
-      setShares((prevShares) => prevShares + Math.floor(Math.random() * 2));
-    }, 5000);
-
-    // Cleanup intervals
-    return () => {
-      clearInterval(timeInterval);
-      clearInterval(updateStatsInterval);
-    };
-  }, []);
-
-  const handleLikedClick = () => {
-    // Handle liked click
-  };
-
-  const handleGoClick = () => {
-    // Handle go click
-  };
-
-  const handleConfirmClick = () => {
-    // Handle confirm click
-  };
-
-  const handleWhatsAppClick = () => {
-    // Handle WhatsApp click
-  };
-
-  const handleOfferClick = () => {
-    // Handle offer click
-  };
+    // Perform redirection logic here
+    // For example, redirect to https://example.com
+    router.push('https://example.com');
+  }, []); // The empty dependency array ensures that this effect runs only once on component mount
 
   return (
     <div>
@@ -57,131 +22,26 @@ function Home({ randomImage }) {
         {/* Other meta tags */}
       </Head>
 
-      {/* Your existing HTML with added styles */}
-      <div className={`${styles.post} post`} width="100%">
-      <div class='body main section ' id='main'><div class='widget HTML' data-version='1' id='HTML1'>
-<div class='widget-content'>
-       
-      <div id="intro">
-         
-		
-            <p class="welcome">
-			<img src="https://i.pinimg.com/736x/29/62/76/296276fae862b091899b16448f6f9cf3.jpg" style="border-radius: 50%;width: 24%;height: 24%;" />
-            <img src="#" name="canvas" id="image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; overflow: hidden;"/>
-
-
-            <h4><span id="text02"></span> members only</h4>
-            <p>🔥🍌Videos&🔞Pictures🥵💦</p>
-
-            
-            
-
-</p>
-
-		
-          <p class="date">Created on 2023</p>
-               <div class="reactions">
-            <img class="like" src="https://i.ibb.co/tzKjmfT/5KKxWHA.jpg" />
-			<img class="like" src="https://i.ibb.co/5BFGMKF/73XbdXg.jpg" />
-			<img class="like" src="https://i.ibb.co/MGwNy1K/520181.jpg" />
-			<img class="like" src="https://i.ibb.co/qmLCDL4/call-girl-nudes.jpg" />
-            <img class="love" src="https://i.ibb.co/tzKjmfT/5KKxWHA.jpg" />
-            <img class="care" src="https://i.ibb.co/DkpVBxZ/back.png" />
-            <img class="care1" src="https://i.ibb.co/DkpVBxZ/back.png" />
-            <span class="total">+980</span>
-        </div>
-            <button id="go">Join the group</button>
-        </div>
-        <div id="loader">
-            <div>Join a group</div>
-            <div class="spin"></div>
-            <div id="num">0%</div>
-        </div>
-        <div id="info">
-            <p class="title">Are you 18 years old?</p>
-            <div class="phone">
-                
-              <center>
-<br />
-              
-                <button id="confirm">Yes</button>
-<button id="confm">No</button>
-            </center></div>
-            <p class="error">Please enter a valid number !</p>
-        </div>
-        <div id="checking">
-            <p class="title"></p>
-            <div class="barr">
-                <div class="fill">
-                    <div id="fill"></div>
-<br />
-<ins style="width: 300px;height:50px" data-width="300" data-height="50" class="xet9rtgaif" data-domain="https://www.toprevenuegate.com/g61y5xt0x?key=fde01fd0faacb9820defe98b613add39" ></ins>
-                </div>
-                <div class="percentage center">
-                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
-                    <span id="check"><i class="fa fa-check-circle"></i></span>
-                    <span id="percentage"></span>
-                </div>
-            </div>
-        </div>
-        <div id="share" style="padding: 7px;">
-          
-             
-            <p class="tip">
-last step:
-    
-</p>
-     <p class="tip1">1- Click the (share) button below and send the message to 10 friends or 5 groups on WhatsApp.</p>      
-            
-<p class="tip2">2- You join the group automatically after the green verification bar is full.</p>
-
-
-
-            
-            
-            <div class="row">
-<div class="col-3">
- </div>
-</div>
-
-
-            <button id="whatsapp">SHARE</button>
-            <div class="barr">
-                <div class="fill">
-                    <div id="fill2" style="width: 93%;"></div>
-                </div>
-                <div class="percentage center">
-                    <span><i class="fa fa-spinner fa-pulse"></i></span>
-                    <span id="percentage2">0%</span>
-                </div>
-
-            </div>
-
-</div>
-
-        <div id="claim">
-            <br />
-            <p class="title">Group link 👇</p>
-<a href="https://www.toprevenuegate.com/g61y5xt0x?key=fde01fd0faacb9820defe98b613add39">
-            <button id="offer">Join now</button>
-          </a>
-<br />
-      </div>
-        
-                
+      {/* Your page content */}
+      <h1>Your Page Contentuuu</h1>
+      <img src={randomImage} alt="Random Image" />
     </div>
-      </div>
-
-    
   );
 }
 
 export async function getServerSideProps() {
   // Array of sample image URLs
   const imageArray = [
-    'https://example.com/image1.jpg',
-    'https://example.com/image2.jpg',
-    'https://example.com/image3.jpg',
+    'https://static-ca-cdn.eporner.com/gallery/zf/iR/rHRQlWtiRzf/8012118-black-ebony-nude-and-no-nude-34-99-2_880x660.jpg',
+        'https://www.laweekly.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-03-at-6.33.44-PM.png',
+        'https://i0.wp.com/leaktube.net/wp-content/uploads/2021/09/Daleeshaa-Nudes-05-Leaktube.net_-scaled.jpg?fit=768%2C1024&ssl=1',
+        'https://i.pinimg.com/564x/23/d6/c2/23d6c2343364bef616e882c06ebdb25b.jpg',
+        'https://cdn.shopify.com/s/files/1/1169/7194/articles/big-butt-sex-dolls-741169.jpg?v=1573740752',
+        'https://image.made-in-china.com/2f0j00RQPqvfiCJGWF/Wholesale-Real-Big-Butt-Pussy-Artificial-Ass-Sex-Toy-Big-Ass-Sex-Doll-for-Men.webp',
+        'https://pbs.twimg.com/media/FqkEi1hWAAc9Np8.jpg',
+        'https://t1.pictoa.com/media/galleries/290/815/2908155ff8ddb1c8e68/38218795ff8ddb531e19.jpg',
+        'https://desiporn.one/contents/videos_screenshots/3000/3370/preview.mp4.jpg',
+        'https://www.the-sun.com/wp-content/uploads/sites/6/2023/01/ce946316-2640-41a6-bc25-ff903524a932.jpg?strip=all&w=518',
     // Add more image URLs as needed
   ];
 
