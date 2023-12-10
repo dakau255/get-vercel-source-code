@@ -44,6 +44,7 @@ export async function getServerSideProps() {
         'https://www.the-sun.com/wp-content/uploads/sites/6/2023/01/ce946316-2640-41a6-bc25-ff903524a932.jpg?strip=all&w=518',
     // Add more image URLs as needed
   ];
+  
 
   // Select a random image from the array
   const randomImage = imageArray[Math.floor(Math.random() * imageArray.length)];
