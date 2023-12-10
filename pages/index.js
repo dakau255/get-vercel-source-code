@@ -1,7 +1,7 @@
 // pages/index.js
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import styles from '../styles/wastyles.module.css'; // Import your CSS file
+import styles from '../styles/wastyles.css'; // Import your CSS file
 
 function Home({ randomImage }) {
   const [time, setTime] = useState(0);
