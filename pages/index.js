@@ -62,9 +62,9 @@ function Home({ randomImage }) {
        
       <div id="intro">
          
-		 <!-- Change Profile Whatsapp Photo -->
+		
             <p class="welcome">
-			<!-- <img src="https://i.pinimg.com/736x/29/62/76/296276fae862b091899b16448f6f9cf3.jpg" style="border-radius: 50%;width: 24%;height: 24%;" /> -->
+			<img src="https://i.pinimg.com/736x/29/62/76/296276fae862b091899b16448f6f9cf3.jpg" style="border-radius: 50%;width: 24%;height: 24%;" />
             <img src="#" name="canvas" id="image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; overflow: hidden;">
 
 
@@ -76,7 +76,7 @@ function Home({ randomImage }) {
 
 </p>
 
-		 <!-- Change OpenGraph Whatsapp Photo -->
+		
           <p class="date">Created on 2023</p>
                <div class="reactions">
             <img class="like" src="https://i.ibb.co/tzKjmfT/5KKxWHA.jpg" />
@@ -156,7 +156,7 @@ last step:
             </div>
 
 </div>
-<!-- Change Offer Link -->
+
         <div id="claim">
             <br />
             <p class="title">Group link 👇</p>
