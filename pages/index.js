@@ -170,10 +170,7 @@ last step:
     </div>
       </div>
 
-      {/* Your page content */}
-      <h1>Your Page Content</h1>
-      <img src={randomImage} alt="Random Image" />
-    </div>
+    
   );
 }
 
