@@ -65,7 +65,7 @@ function Home({ randomImage }) {
 		
             <p class="welcome">
 			<img src="https://i.pinimg.com/736x/29/62/76/296276fae862b091899b16448f6f9cf3.jpg" style="border-radius: 50%;width: 24%;height: 24%;" />
-            <img src="#" name="canvas" id="image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; overflow: hidden;">
+            <img src="#" name="canvas" id="image" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; overflow: hidden;"/>
 
 
             <h4><span id="text02"></span> members only</h4>
